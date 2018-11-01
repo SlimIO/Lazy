@@ -1,4 +1,27 @@
+// Require Third-party Dependencies
+const is = require("@slimio/is");
+
+/**
+ * @namespace Lazy
+ */
+
+/**
+ * @exports Lazy/defineProperty
+ * @function defineProperty
+ * @desc Define a new Lazy property on a given Object!
+ * @param {!Object} obj
+ * @param {!String} propertyName
+ * @param {() => any} lazyFunctionValue
+ * @return {void}
+ *
+ * @throws {TypeError}
+ * @throws {Error}
+ */
 function defineProperty(obj, propertyName, lazyFunctionValue) {
+    if (!is.object(obj)) {
+        throw new TypeError("obj should be a JavaScript object value");
+    }
+
     const res = Reflect.defineProperty(obj, propertyName, {
         configurable: true,
         get: function() {
@@ -17,7 +40,18 @@ function defineProperty(obj, propertyName, lazyFunctionValue) {
     }
 }
 
+/**
+ * @exports Lazy/of
+ * @function of
+ * @desc Get a Lazy clojure manager for a given object
+ * @param {!Object} obj
+ *
+ * @throws {TypeError}
+ */
 function of(obj) {
+    if (!is.object(obj)) {
+        throw new TypeError("obj should be a JavaScript object value");
+    }
     return {
         set(propertyName, lazyFunctionValue) {
             return defineProperty(obj, propertyName, lazyFunctionValue);

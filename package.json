@@ -1,0 +1,55 @@
+{
+  "name": "@slimio/lazy",
+  "version": "1.0.0",
+  "description": "SlimIO Lazy Properties lib",
+  "main": "index.js",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "test": "ava --verbose",
+    "doc": "jsdoc -c ./jsdoc.json -r",
+    "coverage": "nyc ava",
+    "report": "nyc report --reporter=html"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "nyc": {
+    "check-coverage": true,
+    "per-file": false,
+    "lines": 98,
+    "statements": 98,
+    "functions": 98,
+    "branches": 90
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SlimIO/Lazy.git"
+  },
+  "keywords": [],
+  "author": "SlimIO",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SlimIO/Lazy/issues"
+  },
+  "homepage": "https://github.com/SlimIO/Lazy#readme",
+  "dependencies": {
+    "@slimio/is": "^1.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.2.1",
+    "@commitlint/config-conventional": "^7.1.2",
+    "@escommunity/minami": "^1.0.0",
+    "@slimio/eslint-config": "^1.1.8",
+    "@types/node": "^10.12.1",
+    "ava": "^0.25.0",
+    "eslint": "^5.8.0",
+    "husky": "^1.1.2",
+    "jsdoc": "^3.5.5",
+    "nyc": "^13.1.0"
+  }
+}
