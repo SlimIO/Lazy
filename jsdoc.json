@@ -7,8 +7,7 @@
     },
     "source": {
         "include": [
-            "index.js",
-            "src/addon.class.js"
+            "index.js"
         ],
         "exclude": [
             "node_modules",
