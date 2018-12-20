@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/SlimIO/Lazy#readme",
   "dependencies": {
-    "@slimio/is": "^1.2.0"
+    "@slimio/is": "^1.4.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.2.1",
