@@ -22,6 +22,7 @@ function defineProperty(obj, propertyName, lazyFunctionValue) {
         throw new TypeError("obj should be a JavaScript object value");
     }
 
+    // eslint-disable-next-line
     const res = Reflect.defineProperty(obj, propertyName, {
         configurable: true,
         get: function get() {
