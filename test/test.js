@@ -5,17 +5,15 @@ const ava = require("ava");
 const Lazy = require("../");
 
 ava("Lazy.of(primitive) should throw a TypeError", (assert) => {
-    const { message } = assert.throws(() => {
+    assert.throws(() => {
         Lazy.of(10);
-    }, TypeError);
-    assert.is(message, "obj should be a JavaScript object value");
+    }, { instanceOf: TypeError, message: "obj should be a JavaScript object value" });
 });
 
 ava("Lazy.defineProperty(primitive) should throw a TypeError", (assert) => {
-    const { message } = assert.throws(() => {
+    assert.throws(() => {
         Lazy.defineProperty(10);
-    }, TypeError);
-    assert.is(message, "obj should be a JavaScript object value");
+    }, { instanceOf: TypeError, message: "obj should be a JavaScript object value" });
 });
 
 ava("Define lazyProperty with defineProperty() method", (assert) => {
@@ -41,8 +39,8 @@ ava("Define lazyProperty with of.set() method", (assert) => {
 
 ava("Define lazyProperty on freezed Object should throw an Error", (assert) => {
     const obj = Object.freeze({});
-    const { message } = assert.throws(() => {
+
+    assert.throws(() => {
         Lazy.defineProperty(obj, "foo", "bar");
-    }, Error);
-    assert.is(message, "Failed to define lazy property on given Object!");
+    }, { instanceOf: Error, message: "Failed to define lazy property on given Object!" });
 });
