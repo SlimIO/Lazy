@@ -7,9 +7,7 @@
 [![Build Status](https://travis-ci.com/SlimIO/Lazy.svg?branch=master)](https://travis-ci.com/SlimIO/Lazy)
 [![Greenkeeper badge](https://badges.greenkeeper.io/SlimIO/Lazy.svg)](https://greenkeeper.io/)
 
-SlimIO Little lib to set Lazy Properties on JavaScript Objects!
-
-> **Warning** Lazy Property are set to writable: false
+SlimIO package to achieve [Lazy evaluation](https://en.wikipedia.org/wiki/Lazy_evaluation) on JavaScript Objects! It use getter/setter to evaluate a function which return the final value at runtime (only when the property is requested).
 
 ## Getting Started
 
@@ -42,5 +40,18 @@ const obj = Object.freeze({});
 Lazy.defineProperty(obj, "foo", () => "bar"); // throw Error
 ```
 
-## Licence
+## API
+
+### defineProperty(target, propertyName, lazyFunctionValue): void
+Define a new lazy property with a given name on **target**. Similar to [Object.defineProperty](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/defineProperty).
+
+The property will be defined with:
+```json
+{
+    "enumerable": true,
+    "writable": false
+}
+```
+
+## License
 MIT
