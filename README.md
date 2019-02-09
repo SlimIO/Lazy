@@ -1,7 +1,9 @@
 # Lazy
+![Version](https://img.shields.io/badge/dynamic/json.svg?url=https://raw.githubusercontent.com/SlimIO/Lazy/master/package.json&query=$.version&label=Version)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/SlimIO/is/commit-activity)
 ![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)
-![Version](https://img.shields.io/badge/dynamic/json.svg?url=https://raw.githubusercontent.com/SlimIO/Lazy/master/package.json&query=$.version&label=Version)
+![size](https://img.shields.io/bundlephobia/min/@slimio/lazy.svg?style=flat)
+[![Known Vulnerabilities](https://snyk.io/test/github/SlimIO/Lazy/badge.svg?targetFile=package.json)](https://snyk.io/test/github/SlimIO/Lazy?targetFile=package.json)
 [![Build Status](https://travis-ci.com/SlimIO/Lazy.svg?branch=master)](https://travis-ci.com/SlimIO/Lazy)
 [![Greenkeeper badge](https://badges.greenkeeper.io/SlimIO/Lazy.svg)](https://greenkeeper.io/)
 
