@@ -1,7 +1,7 @@
 # Lazy
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/SlimIO/is/commit-activity)
 ![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)
-![V1.0](https://img.shields.io/badge/version-1.2.0-blue.svg)
+![Version](https://img.shields.io/badge/dynamic/json.svg?url=https://raw.githubusercontent.com/SlimIO/Lazy/master/package.json&query=$.version&label=Version)
 
 SlimIO Little lib to set Lazy Properties on JavaScript Objects!
 
