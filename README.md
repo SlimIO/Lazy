@@ -46,12 +46,29 @@ Lazy.defineProperty(obj, "foo", () => "bar"); // throw Error
 ### defineProperty(target, propertyName, lazyFunctionValue): void
 Define a new lazy property with a given name on **target**. Similar to [Object.defineProperty](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/defineProperty).
 
-The property will be defined with:
+The property descriptors will be defined as follow:
 ```json
 {
     "enumerable": true,
     "writable": false
 }
+```
+
+### lazy.of< T >(target: T): LazyClojure< T >
+Create a lazy clojure described by the following interface:
+```ts
+interface LazyClojure<T> {
+    set(propertyName: string, lazyFunctionValue: lazyHandler): void;
+    value: T;
+}
+```
+
+The **set** method is a mirror of the root **defineProperty** method.
+```js
+const lp = Lazy.of({});
+lp.set("foo", () => "bar");
+
+const obj = lp.value;
 ```
 
 ## License
