@@ -1,6 +1,3 @@
-/// <reference types="node" />
-/// <reference types="@types/node" />
-
 declare namespace Lazy {
     type lazyHandler = () => any;
 
