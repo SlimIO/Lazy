@@ -31,7 +31,14 @@
     "type": "git",
     "url": "git+https://github.com/SlimIO/Lazy.git"
   },
-  "keywords": [],
+  "keywords": [
+      "lazy",
+      "evaluation",
+      "property",
+      "object",
+      "getter",
+      "setter"
+  ],
   "author": "SlimIO",
   "license": "MIT",
   "bugs": {
