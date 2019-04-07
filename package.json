@@ -7,7 +7,7 @@
     "node": ">=10"
   },
   "scripts": {
-    "prepublish": "pkg-ok",
+    "prepublishOnly": "pkg-ok",
     "test": "ava --verbose",
     "doc": "jsdoc -c ./jsdoc.json -r",
     "coverage": "nyc ava",
