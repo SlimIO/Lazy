@@ -74,5 +74,11 @@ lp.set("foo", () => "bar");
 const obj = lp.value;
 ```
 
+## Dependencies
+
+|Name|Refactoring|Security Risk|Usage|
+|---|---|---|---|
+|[@slimio/is](https://github.com/SlimIO/is#readme)|Minor|Low|Type checker|
+
 ## License
 MIT
