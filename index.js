@@ -3,11 +3,15 @@ const is = require("@slimio/is");
 
 /**
  * @namespace Lazy
+ * @author GENTILHOMME Thomas
  */
 
 /**
+ * @version 1.0.0
+ *
  * @exports Lazy/defineProperty
  * @function defineProperty
+ * @memberof Lazy#
  * @desc Define a new Lazy property on a given Object!
  * @param {!Object} obj JavaScript Object
  * @param {!String} propertyName Object Property (Member) name
@@ -42,13 +46,26 @@ function defineProperty(obj, propertyName, lazyFunctionValue) {
 }
 
 /**
+ * @version 1.0.0
+ *
  * @exports Lazy/of
  * @function of
+ * @memberof Lazy#
  * @desc Get a Lazy clojure manager for a given object
  * @param {!Object} obj JavaScript Object
  * @returns {*}
  *
  * @throws {TypeError}
+ *
+ * @example
+ * const lp = Lazy.of({});
+ *
+ * lp.set("foo", () => "bar");
+ * lp.set("hello", () => {
+ *     // Do job here
+ * });
+ *
+ * const myObj = lp.value;
  */
 function of(obj) {
     if (!is.object(obj)) {
