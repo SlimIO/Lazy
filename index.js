@@ -1,3 +1,5 @@
+"use strict";
+
 // Require Third-party Dependencies
 const is = require("@slimio/is");
 
@@ -12,11 +14,11 @@ const is = require("@slimio/is");
  * @exports Lazy/defineProperty
  * @function defineProperty
  * @memberof Lazy#
- * @desc Define a new Lazy property on a given Object!
- * @param {!Object} obj JavaScript Object
- * @param {!String} propertyName Object Property (Member) name
+ * @description Define a new Lazy property on a given Object!
+ * @param {!object} obj JavaScript Object
+ * @param {!string} propertyName Object Property (Member) name
  * @param {Function} lazyFunctionValue Lazy Function that will return final value
- * @return {void}
+ * @returns {void}
  *
  * @throws {TypeError}
  * @throws {Error}
@@ -51,8 +53,8 @@ function defineProperty(obj, propertyName, lazyFunctionValue) {
  * @exports Lazy/of
  * @function of
  * @memberof Lazy#
- * @desc Get a Lazy clojure manager for a given object
- * @param {!Object} obj JavaScript Object
+ * @description Get a Lazy clojure manager for a given object
+ * @param {!object} obj JavaScript Object
  * @returns {*}
  *
  * @throws {TypeError}
