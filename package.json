@@ -42,8 +42,6 @@
   "files": [
     "index.js",
     "index.d.ts",
-    "slimio.toml",
-    ".eslintignore",
     "src"
   ],
   "author": "SlimIO",
