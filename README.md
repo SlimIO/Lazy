@@ -11,7 +11,7 @@
 SlimIO package to achieve [Lazy evaluation](https://en.wikipedia.org/wiki/Lazy_evaluation) on JavaScript Objects! It use getter/setter to evaluate a function which return the final value at runtime (only when the property is requested).
 
 ## Requirements
-- Node.js v10 or higher
+- Node.js v12 or higher
 
 ## Getting Started
 
