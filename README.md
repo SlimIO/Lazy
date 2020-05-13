@@ -6,7 +6,6 @@
 ![dep](https://img.shields.io/david/SlimIO/Lazy.svg)
 [![Known Vulnerabilities](https://snyk.io/test/github/SlimIO/Lazy/badge.svg?targetFile=package.json)](https://snyk.io/test/github/SlimIO/Lazy?targetFile=package.json)
 [![Build Status](https://travis-ci.com/SlimIO/Lazy.svg?branch=master)](https://travis-ci.com/SlimIO/Lazy)
-[![Greenkeeper badge](https://badges.greenkeeper.io/SlimIO/Lazy.svg)](https://greenkeeper.io/)
 
 SlimIO package to achieve [Lazy evaluation](https://en.wikipedia.org/wiki/Lazy_evaluation) on JavaScript Objects! It use getter/setter to evaluate a function which return the final value at runtime (only when the property is requested).
 
