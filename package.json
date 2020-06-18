@@ -11,7 +11,9 @@
     "test": "cross-env psp && nyc --reporter=lcov ava --verbose",
     "doc": "jsdoc -c ./jsdoc.json -r -R ./README.md -P ./package.json --verbose",
     "coverage": "codecov",
-    "report": "nyc report --reporter=html"
+    "report": "nyc report --reporter=html",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "husky": {
     "hooks": {
@@ -50,7 +52,8 @@
   },
   "homepage": "https://github.com/SlimIO/Lazy#readme",
   "dependencies": {
-    "@slimio/is": "^1.5.0"
+    "@slimio/is": "^1.5.0",
+    "snyk": "^1.345.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
@@ -66,5 +69,6 @@
     "jsdoc": "^3.6.4",
     "nyc": "^15.0.1",
     "pkg-ok": "^2.3.1"
-  }
+  },
+  "snyk": true
 }
